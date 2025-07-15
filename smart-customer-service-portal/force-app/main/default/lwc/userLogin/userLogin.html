@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="User Login">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Email" type="email" name="email" onchange={handleChange}></lightning-input>
+            <lightning-input label="Password" type="password" name="password" onchange={handleChange}></lightning-input>
+            <lightning-button label="Login" variant="brand" onclick={handleLogin}></lightning-button>
+            <p if:true={message} class="slds-text-color_error">{message}</p>
+            <p if:true={welcomeMessage} class="slds-text-color_success">{welcomeMessage}</p>
+        </div>
+    </lightning-card>
+</template>

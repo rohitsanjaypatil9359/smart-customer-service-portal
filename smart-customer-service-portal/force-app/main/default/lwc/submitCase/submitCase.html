@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Submit a Support Case">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Email" type="email" value={email} onchange={handleInput}></lightning-input>
+            <lightning-input label="Subject" value={subject} onchange={handleInput}></lightning-input>
+            <lightning-textarea label="Description" value={description} onchange={handleInput}></lightning-textarea>
+            <lightning-button label="Submit Case" variant="brand" onclick={handleSubmit}></lightning-button>
+            
+            <template if:true={successMessage}>
+                <p class="slds-text-color_success">{successMessage}</p>
+            </template>
+            <template if:true={errorMessage}>
+                <p class="slds-text-color_error">{errorMessage}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
